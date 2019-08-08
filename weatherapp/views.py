@@ -63,7 +63,7 @@ def charts(request):
         chartPresTitle = 'Air Pressure last 24h'
         chartHumiTitle = 'Humidity last 24h'
 
-        readings = TPH.objects.filter(loadType = 'AVG').order_by('-loadTimestamp')[:24][::-1]
+        readings = TPH.objects.filter(loadType = 'AVG').order_by('-loadTimestamp')[:72][::-1]
 
     elif period == '7d':
         xLabels = ['7.18', '7.12', '7.06', '7.00', '6.18', '6.12', '6.06', '6.00', '5.18', '5.12', '5.06', '5.00', '4.18', '4.12', '4.06', '4.00', '3.18', '3.12', '3.06', '3.00', '2.18', '2.12', '2.06', '2.00', '1.18', '1.12', '1.06', '1.00']
